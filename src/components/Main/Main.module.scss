@@ -1,5 +1,36 @@
 .main {
   background-color: #252836;
   color: #fff;
-  max-width: 680px;
+  padding: 30px 25px 0;
+  width: 100%;
+  &__form {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__input {
+    padding: 14px 14px 14px 42px;
+    background-color: #2d303e;
+    border: 1px solid #393c49;
+    border-radius: 8px;
+    color: #fff;
+
+    &::placeholder {
+      color: #abbbc2;
+    }
+    &Img {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translate(0, -50%);
+    }
+  }
+  &__products {
+    &Title {
+      font-style: 20px;
+      line-height: 28px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 60px;
+    }
+  }
 }

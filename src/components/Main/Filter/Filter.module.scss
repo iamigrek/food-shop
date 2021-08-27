@@ -1,0 +1,30 @@
+.filter {
+  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #393c49;
+  margin-bottom: 35px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__link {
+    color: #fff;
+    font-weight: 600;
+
+    &_active {
+      color: #ea7c69;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+
+        height: 3px;
+        width: 40px;
+        background-color: #ea7c69;
+      }
+    }
+  }
+}

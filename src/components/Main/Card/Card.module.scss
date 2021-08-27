@@ -1,0 +1,29 @@
+.card {
+  &__item {
+    background-color: #1f1d2b;
+    border-radius: 16px;
+    grid-column: 2 span;
+    text-align: center;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: -30px;
+  }
+  &__title {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px !important;
+  }
+  &__price {
+    margin-bottom: 6px;
+  }
+  &__btn {
+    width: 100%;
+  }
+}

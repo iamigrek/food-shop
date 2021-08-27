@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  line-height: 19px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.listReset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &_addToCart {
+    color: #fff;
+    background-color: #ea7c69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+}
