@@ -81,7 +81,12 @@ function Header() {
           </ul>
         </nav>
       </div>
-      <button className={`btn ${style.header__logOutBtn}`}>
+      <button
+        onClick={() => {
+          alert('sorry, but this button is for beauty :p');
+        }}
+        className={`btn ${style.header__logOutBtn}`}
+      >
         <svg
           width='24'
           height='24'

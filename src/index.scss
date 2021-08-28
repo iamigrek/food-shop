@@ -49,6 +49,16 @@ h6 {
   &_addToCart {
     color: #fff;
     background-color: #ea7c69;
+    border: 1px solid #ea7c69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  &_addedToCart {
+    color: #ea7c69;
+    background-color: transparent;
+    border: 1px solid #ea7c69;
     box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
     padding: 10px 0;
     border-radius: 8px;

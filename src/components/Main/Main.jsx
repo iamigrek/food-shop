@@ -3,7 +3,7 @@ import Filter from './Filter/Filter';
 import style from './Main.module.scss';
 import React from 'react';
 
-function Main() {
+function Main({ productData, addToCart }) {
   const [searchItem, setSearchItem] = React.useState();
 
   const productSearch = event => {
@@ -31,7 +31,17 @@ function Main() {
         <h2 className={style.main__productsTitle}>
           {searchItem ? `Search by request: "${searchItem}"` : `Choose Dishes`}
         </h2>
-        <Card productSearch={productSearch} />
+        <ul className={`listReset grid`}>
+          {productData.map(item => (
+            <Card
+              productSearch={productSearch}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              imgUrl={item.imgUrl}
+            />
+          ))}
+        </ul>
       </div>
     </div>
   );
