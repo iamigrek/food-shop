@@ -3,7 +3,7 @@ import Filter from './Filter/Filter';
 import style from './Main.module.scss';
 import React from 'react';
 
-function Main({ productData, addToCart }) {
+function Main({ productData, onAddToCart, addToCart, onCart }) {
   const [searchItem, setSearchItem] = React.useState();
 
   const productSearch = event => {
@@ -39,6 +39,9 @@ function Main({ productData, addToCart }) {
               title={item.title}
               price={item.price}
               imgUrl={item.imgUrl}
+              onCart={obj => {
+                onAddToCart(obj);
+              }}
             />
           ))}
         </ul>

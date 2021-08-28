@@ -1,10 +1,11 @@
 import style from './Card.module.scss';
 import React from 'react';
 
-function Card({ productSearch, title, price, imgUrl, id }) {
+function Card({ productSearch, title, price, imgUrl, id, onCart }) {
   const [cartAddSrate, setCartAddSrate] = React.useState(false);
 
   const addToCart = () => {
+    onCart({ imgUrl, title, price });
     setCartAddSrate(!cartAddSrate);
     console.log(cartAddSrate);
   };

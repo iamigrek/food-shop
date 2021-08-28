@@ -1,7 +1,7 @@
 import style from './Cart.module.scss';
 import CartList from './CartList/CartList';
 
-function Cart({ cardData }) {
+function Cart({ items }) {
   return (
     <div className={style.cart}>
       <div>
@@ -13,7 +13,7 @@ function Cart({ cardData }) {
           </div>
         </div>
         <ul className={`listReset ${style.cartList}`}>
-          {cardData.map(item => (
+          {items.map(item => (
             <CartList
               d={item.id}
               title={item.title}

@@ -56,46 +56,44 @@ const productData = [
   },
 ];
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Spicy seasoned seafood noodles',
-    price: 2.29,
-    imgUrl: './images/products/1.png',
-  },
-  {
-    id: 2,
-    title: 'Salted Pasta with mushroom sauce',
-    price: 2.51,
-    imgUrl: './images/products/2.png',
-  },
-  {
-    id: 3,
-    title: 'Beef dumpling in hot and sour soup',
-    price: 2.99,
-    imgUrl: './images/products/3.png',
-  },
-  {
-    id: 4,
-    title: 'Healthy noodle with spinach leaf',
-    price: 3.61,
-    imgUrl: './images/products/4.png',
-  },
-];
-
 function App() {
+  const [cartItem, setCartItem] = React.useState([
+    {
+      id: 2,
+      title: 'Salted Pasta with mushroom sauce',
+      price: 2.51,
+      imgUrl: './images/products/2.png',
+    },
+    {
+      id: 3,
+      title: 'Beef dumpling in hot and sour soup',
+      price: 2.99,
+      imgUrl: './images/products/3.png',
+    },
+    {
+      id: 4,
+      title: 'Healthy noodle with spinach leaf',
+      price: 3.61,
+      imgUrl: './images/products/4.png',
+    },
+  ]);
+
+  const onAddToCart = obj => {
+    setCartItem(prev => [...prev, obj]);
+  };
+
   return (
     <BrowserRouter>
       <div className='App'>
         <Header />
         <Route exact path='/'>
-          <Main productData={productData} />
+          <Main onAddToCart={onAddToCart} productData={productData} />
         </Route>
         <Route path='/discount'>
           <Discount />
         </Route>
 
-        <Cart cardData={cardData} />
+        <Cart items={cartItem} onAddToCart={onAddToCart} />
       </div>
     </BrowserRouter>
   );
