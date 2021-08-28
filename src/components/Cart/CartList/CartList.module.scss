@@ -9,6 +9,12 @@
   &__title {
     font-weight: 500;
     line-height: 18px;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__titleWrapper {
   }
   &__info {
     display: flex;

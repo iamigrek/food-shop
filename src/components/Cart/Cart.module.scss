@@ -32,3 +32,9 @@
     line-height: 22px;
   }
 }
+
+.cartList {
+  max-height: 700px;
+  padding-top: 25px;
+  overflow-y: auto;
+}
