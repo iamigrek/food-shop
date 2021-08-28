@@ -1,12 +1,19 @@
 import Card from './Card/Card';
 import Filter from './Filter/Filter';
 import style from './Main.module.scss';
+import React from 'react';
 
 function Main() {
+  const [searchItem, setSearchItem] = React.useState();
+
+  const productSearch = event => {
+    setSearchItem(event.target.value);
+  };
   return (
     <div className={style.main}>
       <form className={style.main__form} action='#'>
         <input
+          onChange={productSearch}
           className={style.main__input}
           type='text'
           placeholder='Search for food, coffe, etc..'
@@ -21,8 +28,10 @@ function Main() {
       <Filter />
 
       <div className={style.main__products}>
-        <h2 className={style.main__productsTitle}>Choose Dishes</h2>
-        <Card />
+        <h2 className={style.main__productsTitle}>
+          {searchItem ? `Search by request: "${searchItem}"` : `Choose Dishes`}
+        </h2>
+        <Card productSearch={productSearch} />
       </div>
     </div>
   );

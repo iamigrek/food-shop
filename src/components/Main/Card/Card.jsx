@@ -1,6 +1,6 @@
 import style from './Card.module.scss';
 
-function Card() {
+function Card(productSearch) {
   const productData = [
     {
       id: 1,
