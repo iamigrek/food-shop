@@ -6,12 +6,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  font-family: 'Barlow', sans-serif;
 }
 
 body {
   margin: 0;
   color: #fff;
-  font-family: 'Barlow', sans-serif;
   font-weight: 400;
   line-height: 19px;
   font-size: 14px;
@@ -53,6 +53,21 @@ h6 {
     padding: 10px 0;
     border-radius: 8px;
     font-weight: 600;
+  }
+  &__cart {
+    padding: 14px 0;
+    color: #fff;
+    background-color: #ea7c69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100%;
+  }
+  &__del {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ea7c69;
+    border-radius: 8px;
   }
 }
 
